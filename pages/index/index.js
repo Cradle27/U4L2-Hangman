@@ -23,3 +23,37 @@ function phraseChoose() {
     phrase = phrases[Math.floor(Math.random() * phrases.length)]
     return phrase
 }
+
+function genKeyboard(){
+  let j = 0;
+  const alpha = "qwertyuiop*asdfghjkl*zxcvbnm* ";
+  const keyboard = document.createElement('div');
+  keyboard.id = 'board';
+  const text_box = document.getElementById('text_box');
+  const body = document.getElementsByTagName('body')[0];
+  for (let i=0; i < 4; i++){
+    const keyRow = document.createElement('div');
+    keyRow.className = 'row';
+    while(alpha[j] != '*' && alpha[j] !== undefined){
+      const tile = document.createElement('div');
+      tile.className = 'key';
+
+      if(alpha[j] == ' '){
+        tile.textContent = 'Space';
+        tile.id = 'space';
+        tile.onclick = function(){keyPress(' ', text_box)};
+      }
+      else{
+        tile.textContent = alpha[j].toUpperCase();
+        tile.id = alpha[j];
+        tile.onclick = function(){keyPress(tile.id, text_box)};
+      }
+
+     
+      keyRow.appendChild(tile);
+      keyboard.append(keyRow);
+      j++;
+    }j++;
+  }
+  body.appendChild(keyboard);
+}
