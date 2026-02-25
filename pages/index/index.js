@@ -57,3 +57,8 @@ function genKeyboard(){
   }
   body.appendChild(keyboard);
 }
+
+function keyPress(key, location){
+  console.log(key);
+  location.textContent += key;
+}
