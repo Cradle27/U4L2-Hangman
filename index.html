@@ -12,10 +12,13 @@
 
     <body>
 
-        <div>
-            <img id = '' src = "resources/index/hangman_post_art.png" alt = "Hangman Post">
+        <div id = 'hangman'>
+            <img id = 'hangman_post' src = "resources/index/hangman_post_art.png" alt = "Hangman Post">
 
-            <!-- The underscores go here -->
+            <div id = 'puzzle_details'>
+                <div id = 'letters'><h4>Letters Previously Guessed:</h4><h5 id = 'guessed_letters'></h5></div>
+                <!-- The underscores go here -->
+             </div>
         </div>
 
         <script>keyboard()</script>
