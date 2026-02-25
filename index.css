@@ -4,12 +4,17 @@ body{
     flex-direction: column;
 }
 
+h2#title{
+    font-family: 'Verdana';
+    color: #b87333
+}
+
 div#hangman{
     display: flex;
     flex-direction: row;
 }
 
 img#hangman_post{
-    width: 30vw;
+    width: 50vw;
     height: auto;
 }
