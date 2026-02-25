@@ -6,7 +6,8 @@ body{
 
 h2#title{
     font-family: 'Verdana';
-    color: #b87333
+    color: #b87333;
+    text-align: center;
 }
 
 div#hangman{
