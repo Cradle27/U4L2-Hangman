@@ -19,3 +19,7 @@ img#hangman_post{
     width: 50vw;
     height: auto;
 }
+
+.caption{
+    color: #b87333;
+}
