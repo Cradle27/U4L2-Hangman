@@ -8,3 +8,8 @@ div#hangman{
     display: flex;
     flex-direction: row;
 }
+
+img#hangman_post{
+    width: 30vw;
+    height: auto;
+}
