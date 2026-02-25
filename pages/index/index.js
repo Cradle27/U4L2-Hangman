@@ -41,12 +41,12 @@ function genKeyboard(){
       if(alpha[j] == ' '){
         tile.textContent = 'Space';
         tile.id = 'space';
-        tile.onclick = function(){keyPress(' ', text_box)};
+        tile.onclick = function(){checkLet('', key)};
       }
       else{
         tile.textContent = alpha[j].toUpperCase();
         tile.id = alpha[j];
-        tile.onclick = function(){keyPress(tile.id, text_box)};
+        tile.onclick = function(){checkLet(tile.id, key)};
       }
 
      
