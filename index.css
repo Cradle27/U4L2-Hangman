@@ -22,6 +22,13 @@ img#hangman_post{
     height: auto;
 }
 
+div#puzzle_details{
+  margin-top: 8vh;
+  margin-bottom: 10vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .caption{
     color: #b87333;
 }
@@ -54,4 +61,9 @@ div.key{
   justify-content: center;
   align-items: center;
   margin: .75%;
+}
+
+div.key:hover{
+  border-color: #801818;
+  color: #801818;
 }
