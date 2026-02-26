@@ -2,6 +2,7 @@ body{
     background-color: ivory;
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 h2#title{
