@@ -66,5 +66,6 @@ div.key{
 
 div.key:hover{
   border-color: #801818;
+  background-color: #DAB98C;
   color: #801818;
 }
