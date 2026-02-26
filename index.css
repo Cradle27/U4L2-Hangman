@@ -23,14 +23,24 @@ img#hangman_post{
 }
 
 div#puzzle_details{
+  display: flex;
   margin-top: 8vh;
   margin-bottom: 10vh;
+  margin-left: -10vw;
   flex-direction: column;
   justify-content: space-between;
 }
 
+h2#guessed_letters{
+  color: #b87333;
+}
+
 .caption{
     color: #b87333;
+}
+
+h1.winbox{
+  color: #b87333;
 }
 
 div#board{
