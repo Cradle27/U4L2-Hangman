@@ -23,6 +23,7 @@ img#hangman_post{
 }
 
 div#puzzle_details{
+  display: flex;
   margin-top: 8vh;
   margin-bottom: 10vh;
   flex-direction: column;
