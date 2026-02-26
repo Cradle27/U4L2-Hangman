@@ -48,6 +48,7 @@ div.key{
   display: flex;
   border-style: solid;
   border-color: #b87333;
+  color: #b87333;
   height: 7vh;
   width: 3vw;
   justify-content: center;
