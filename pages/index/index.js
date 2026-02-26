@@ -12,7 +12,7 @@ function checkLet(guess, key) {
 
 function checkWin(){
     /*get solved/unsolved key*/
-    if ("_" in /*key*/ ) {
+    if ("_" in "_" ) {
         return false
     }
     /*win sequence*/
