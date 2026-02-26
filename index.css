@@ -31,6 +31,10 @@ div#puzzle_details{
   justify-content: space-between;
 }
 
+h4#guessed_letters{
+  color: #b87333;
+}
+
 .caption{
     color: #b87333;
 }
