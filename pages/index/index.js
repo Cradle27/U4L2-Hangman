@@ -46,10 +46,11 @@ function genKeyboard(){
         tile.textContent = alpha[j].toUpperCase();
         tile.id = alpha[j];
         tile.onclick = function(){checkLet(tile.id, key)};
+        keyRow.appendChild(tile);
       }
 
      
-      keyRow.appendChild(tile);
+      
       keyboard.append(keyRow);
       j++;
     }j++;
