@@ -35,6 +35,10 @@ h2#guessed_letters{
   color: #b87333;
 }
 
+div#keyRedacted{
+  font-size: 5ch;
+}
+
 .caption{
     color: #b87333;
 }
