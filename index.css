@@ -30,7 +30,7 @@ div#board{
   display: flex;
   height: 30vh;
   width: 75vw;
-  margin-top: 5%;
+  margin-top: -5%;
   margin-bottom: 5%;
   justify-content: center;
   flex-direction: column;
