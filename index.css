@@ -57,6 +57,6 @@ div.key{
 }
 
 div.key:hover{
-  background-color: #801818;
+  border-color: #801818;
   color: #801818;
 }
