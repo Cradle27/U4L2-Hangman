@@ -55,3 +55,7 @@ div.key{
   align-items: center;
   margin: .75%;
 }
+
+div.key:hover{
+  background-color: #801818;
+}
