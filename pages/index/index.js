@@ -1,21 +1,31 @@
-function checkLet(guess, key) {
-    for (i=0;i<key.length - 1; i++) {
-        if (guess == key[i]) {
-            key[i] = guess
-
+function checkLet(guess) {
+  keyRedactedBox = document.getElementById("keyRedacted")
+    if (guess in key) {
+      for (i=0;i<keyRedacted.length - 1; i++) {
+        if (guess == keyRedacted[i]) {
+            keyRedacted[i] = guess
         }
-
+      }
+      
+      keyRedactedBox.textContent = keyRedacted
     }
-    /*write to div*/
+    
+    else{
+        document.getElementById("guessed_letters").textContent += `${guess[i]}`
+      }
+    if (checkWin(keyRedacted) == True) {
+      document.getElementById("winBox").textContent = "You Win!"
+    }
     
 }
 
-function checkWin(){
+function checkWin(keyRedacted){
     /*get solved/unsolved key*/
-    if ("_" in "_" ) {
+    if ("_" in keyRedacted ) {
         return false
     }
-    /*win sequence*/
+    return True
+    
 }
 
 function phraseChoose() {
@@ -45,7 +55,7 @@ function genKeyboard(){
       else{
         tile.textContent = alpha[j].toUpperCase();
         tile.id = alpha[j];
-        tile.onclick = function(){checkLet(tile.id, key)};
+        tile.onclick = function(){checkLet(tile.id)};
         keyRow.appendChild(tile);
       }
 
