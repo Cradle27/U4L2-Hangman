@@ -1,5 +1,6 @@
 function checkLet(guess, key) {
   keyRedactedBox = document.getElementById("keyRedacted")
+  keyRedacted = keyRedactedBox.textContent
     if (key.includes(guess)) {
       for (i=0;i<keyRedacted.length - 1; i++) {
         if (guess == keyRedacted[i]) {
@@ -12,6 +13,7 @@ function checkLet(guess, key) {
     
     else{
         document.getElementById("guessed_letters").textContent += `${guess[i]}`
+
       }
     if (checkWin(keyRedacted) == true) {
       /*document.getElementById("winBox").textContent = "You Win!"*/
@@ -22,16 +24,21 @@ function checkLet(guess, key) {
 
 function checkWin(keyRedacted){
     /*get solved/unsolved key*/
-    if ("_" in keyRedacted ) {
+    if ("_" in keyRedacted) {
         return false
     }
     return true
     
 }
 
+function hangTheMan() {
+
+}
+
 function phraseChoose() {
     phrases = ["pneumonoultramicroscopicsilicovolcanoconiosis", "cat", "modulo", "brownie", "hippopotomonstrosesquippedaliophobia", "bloons tower defense", "six-seven", "abc egh klmno qsv", "iodine", "jonas more like old", "cyan magenta yellow black", "hangman", "integer", "function sucks", "wordle"]
     phrase = phrases[Math.floor(Math.random() * phrases.length)]
+    document.getElementById("keyRedacted").textContent = "_".repeat(phrase.length)
     return phrase
 }
 
