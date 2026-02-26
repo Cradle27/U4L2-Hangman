@@ -1,6 +1,6 @@
-function checkLet(guess) {
+function checkLet(guess, key) {
   keyRedactedBox = document.getElementById("keyRedacted")
-    if (guess in key) {
+    if (key.includes(guess)) {
       for (i=0;i<keyRedacted.length - 1; i++) {
         if (guess == keyRedacted[i]) {
             keyRedacted[i] = guess
@@ -13,8 +13,9 @@ function checkLet(guess) {
     else{
         document.getElementById("guessed_letters").textContent += `${guess[i]}`
       }
-    if (checkWin(keyRedacted) == True) {
-      document.getElementById("winBox").textContent = "You Win!"
+    if (checkWin(keyRedacted) == true) {
+      /*document.getElementById("winBox").textContent = "You Win!"*/
+      console.log("win")
     }
     
 }
@@ -24,7 +25,7 @@ function checkWin(keyRedacted){
     if ("_" in keyRedacted ) {
         return false
     }
-    return True
+    return true
     
 }
 
@@ -55,7 +56,7 @@ function genKeyboard(){
       else{
         tile.textContent = alpha[j].toUpperCase();
         tile.id = alpha[j];
-        tile.onclick = function(){checkLet(tile.id)};
+        tile.onclick = function(){checkLet(tile.id, key)};
         keyRow.appendChild(tile);
       }
 
