@@ -25,6 +25,7 @@ function phraseChoose() {
 }
 
 function genKeyboard(){
+  key = phraseChoose()
   let j = 0;
   const alpha = "qwertyuiop*asdfghjkl*zxcvbnm* ";
   const keyboard = document.createElement('div');
@@ -39,9 +40,7 @@ function genKeyboard(){
       tile.className = 'key';
 
       if(alpha[j] == ' '){
-        tile.textContent = 'Space';
-        tile.id = 'space';
-        tile.onclick = function(){checkLet('', key)};
+        ;
       }
       else{
         tile.textContent = alpha[j].toUpperCase();
