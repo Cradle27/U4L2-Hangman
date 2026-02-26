@@ -33,6 +33,10 @@ div#puzzle_details{
     color: #b87333;
 }
 
+h1.winbox{
+  color: #b87333;
+}
+
 div#board{
   display: flex;
   height: 30vh;
