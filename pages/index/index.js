@@ -38,11 +38,7 @@ function hangTheMan() {
 }
 
 function phraseChoose() {
-<<<<<<< HEAD
     phrases = ["pneumonoultramicroscopicsilicovolcanoconiosis", "cat", "modulo", "brownie", "hippopotomonstrosesquippedaliophobia", "bloons tower defense", "six seven", "abc egh klmno qsv", "iodine", "jonas more like old", "cyan magenta yellow black", "hangman", "integer", "function sucks", "wordle", "Yttrium"]
-=======
-    phrases = ["pneumonoultramicroscopicsilicovolcanoconiosis", "cat", "modulo", "brownie", "hippopotomonstrosesquippedaliophobia", "bloons tower defense", "sixseven", "abc egh klmno qsv", "iodine", "jonas more like old", "cyan magenta yellow black", "hangman", "integer", "function sucks", "wordle"]
->>>>>>> 169b96d1ebc4d282533d0423213e99e86161509e
     phrase = phrases[Math.floor(Math.random() * phrases.length)]
     document.getElementById("keyRedacted").textContent = "_ ".repeat(phrase.length)
     return phrase
