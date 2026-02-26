@@ -24,7 +24,7 @@ img#hangman_post{
 
 div#puzzle_details{
   display: flex;
-  margin-top: 8vh;
+  margin-top: 10vh;
   margin-bottom: 10vh;
   margin-left: -10vw;
   flex-direction: column;
@@ -47,7 +47,7 @@ div#board{
   display: flex;
   height: 30vh;
   width: 75vw;
-  margin-top: -5%;
+  margin-top: 5%;
   margin-bottom: 5%;
   justify-content: center;
   flex-direction: column;
