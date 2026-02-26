@@ -27,7 +27,7 @@ function phraseChoose() {
 function genKeyboard(){
   key = phraseChoose()
   let j = 0;
-  const alpha = "qwertyuiop*asdfghjkl*zxcvbnm* ";
+  const alpha = "qwertyuiop*asdfghjkl*zxcvbnm*";
   const keyboard = document.createElement('div');
   keyboard.id = 'board';
   const text_box = document.getElementById('text_box');
