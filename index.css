@@ -2,6 +2,7 @@ body{
     background-color: ivory;
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 h2#title{
@@ -22,4 +23,33 @@ img#hangman_post{
 
 .caption{
     color: #b87333;
+}
+
+div#board{
+  display: flex;
+  height: 30vh;
+  width: 75vw;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div.row{
+  display: flex;
+  height: 33%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.key{
+  display: flex;
+  border-style: solid;
+  border-color: #b87333;
+  height: 7vh;
+  width: 3vw;
+  justify-content: center;
+  align-items: center;
+  margin: .75%;
 }
