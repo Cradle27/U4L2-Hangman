@@ -1,30 +1,52 @@
+chances = 7
+
 function checkLet(guess, key) {
+  if (document.getElementById("guessed_letters").textContent.includes(guess)) {
+    return
+  }
   keyRedactedBox = document.getElementById("keyRedacted")
   keyRedacted = keyRedactedBox.textContent
     if (key.includes(guess)) {
-      for (i=0;i<keyRedacted.length - 1; i++) {
-        if (guess == keyRedacted[i]) {
-            keyRedacted[i] = guess
+      x = ""
+      for (i=0;i<keyRedacted.length; i++) {
+        if (guess == key[i]) {
+            x += key[i]
+        }
+        else {
+          if (keyRedacted[i] == "_") {
+            x += "_"
+          }
+          else {
+            x += key[i]
+          }
         }
       }
       
-      keyRedactedBox.textContent = keyRedacted
-      console.log(keyRedacted)
+      keyRedactedBox.textContent = x
     }
     
     else{
-        document.getElementById("guessed_letters").textContent += `${guess[i]}`
+        document.getElementById("guessed_letters").textContent += `${guess}`
+        chances -= 1
 
       }
-    if (checkWin(keyRedacted) == true) {
-      /*document.getElementById("winBox").textContent = "You Win!"*/
-      console.log("win")
+    if (checkWin(x) == true) {
+      document.getElementById("winbox").textContent = "You Win! Refreshing in 5 seconds."
     }
+    else{
+      if (chances === 0) {
+        document.getElementById("hangman_post").src = "resources/index/hangman_art.png"
+        document.getElementById("winbox").textContent = "You Lost! Refreshing in 5 seconds."
+        setTimeout(
+          function() {location.reload()}, 5000)
+       
+      }
+      }
+    
     
 }
 
 function checkWin(keyRedacted){
-    /*get solved/unsolved key*/
     if (keyRedacted.includes("_")) {
         return false
     }
@@ -32,21 +54,28 @@ function checkWin(keyRedacted){
     
 }
 
-function hangTheMan() {
-  document.getElementById("hangman_post").src = "../../resources/index/hangman_art.png"
 
-}
 
 function phraseChoose() {
     phrases = ["pneumonoultramicroscopicsilicovolcanoconiosis", "cat", "modulo", "brownie", "hippopotomonstrosesquippedaliophobia", "bloons tower defense", "six seven", "abc egh klmno qsv", "iodine", "jonas more like old", "cyan magenta yellow black", "hangman", "integer", "function sucks", "wordle", "Yttrium"]
     phrase = phrases[Math.floor(Math.random() * phrases.length)]
-    document.getElementById("keyRedacted").textContent = "_ ".repeat(phrase.length)
+    x = ""
+    for (i=0; i<phrase.length; i++) {
+      if (phrase[i] != " ") {
+        x += "_"
+      }
+      else {
+        x += " "
+      }
+    }
+    document.getElementById("keyRedacted").textContent = x
     return phrase
 }
 
 function genKeyboard(){
   key = phraseChoose()
   let j = 0;
+  let chances = 7
   const alpha = "qwertyuiop*asdfghjkl*zxcvbnm*";
   const keyboard = document.createElement('div');
   keyboard.id = 'board';
@@ -65,7 +94,7 @@ function genKeyboard(){
       else{
         tile.textContent = alpha[j].toUpperCase();
         tile.id = alpha[j];
-        tile.onclick = function(){checkLet(tile.id, key)};
+        tile.onclick = function(){checkLet(tile.id, key, chances)};
         keyRow.appendChild(tile);
       }
 

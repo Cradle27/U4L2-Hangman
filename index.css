@@ -3,7 +3,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
 h2#title{
@@ -43,8 +42,9 @@ div#keyRedacted{
     color: #b87333;
 }
 
-h1.winbox{
+h1#winbox{
   color: #b87333;
+  
 }
 
 div#board{
